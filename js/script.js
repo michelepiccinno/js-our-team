@@ -40,12 +40,7 @@ const arrayObjects = [
 
 //CICLO L'ARRAY DI OGGETTI
 for (let i = 0; i < arrayObjects.length; i++) {
-  console.log(arrayObjects[i]);
-
-  //ASSEGNO A DELLE VARIABILI TEMPORANEE I SINGOLI VALORI DEGLI OGGETTI
-  //CHE ANDREMO A INIETTEARE NEL HTML (DOPO AVER CREATO GLI ELEMENTI HTML)
-
-  //PRIMA CREO GLI ELEMENTI HTML
+  console.log(arrayObjects[i].firstName);
 
   //RICHIAMO IL CONTAINER PADRE 
   const carContainer = document.querySelector(".card-container");
@@ -62,8 +57,7 @@ for (let i = 0; i < arrayObjects.length; i++) {
   const firstName = document.createElement("h4");
   firstName.classList.add("first-name");
   card.appendChild(firstName);
-  //INIETTO FIRST NAME
-  document.querySelector(".first-name").innerHTML = arrayObjects[i].nome;
+  document.querySelector(".first-name").innerHTML = arrayObjects[i].firstName;
 
   //CREO UN H4, ASSEGNO CLASSE "last-name"  E LO APPENDO AL CONTAINER PADRE
   const lastName = document.createElement("h4");
@@ -75,10 +69,7 @@ for (let i = 0; i < arrayObjects.length; i++) {
   image.classList.add("image");
   card.appendChild(image);
 
-
-
 }
 
 
-
-
+//document.querySelector(".first-name").innerHTML = "prova";
