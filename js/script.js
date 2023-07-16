@@ -46,7 +46,6 @@ const cardContainer = document.querySelector(".card-container");
 //INVOCO LA FUNZIONE CHE CREA E INIETTA GLI ELEMENTI
 createAndInjectHtmlElements(arrayTeam);
 
-
 /**Riceve un array di oggetti, la cicla e inietta il contenuto 
  * nell'HTML creando gli elementi nella stringa di injection
  * 
@@ -69,7 +68,6 @@ function createAndInjectHtmlElements(array) {
 
 
 // /*-------SECONDO METODO (esperimento da completare)-----------*/
-
 
 // 'use strict'
 // const arrayTeam = [
@@ -112,78 +110,46 @@ function createAndInjectHtmlElements(array) {
 // ];
 
 
-// //RICHIAMO IL CONTAINER PADRE
-// const cardContainer = document.querySelector(".card-container");
+// // //RICHIAMO IL CONTAINER PADRE
+// // const cardContainer = document.querySelector(".card-container");
 
-// //CICLO L'ARRAY DI OGGETTI
-// for (let i = 0; i < arrayTeam.length; i++) {
-//   // console.log(arrayTeam[i].firstName);
-//   // console.log(arrayTeam[i].lastName);
-//   // console.log(arrayTeam[i].role);
-//   // console.log(arrayTeam[i].img);
-
-
-
-
-
-
-
-//   // //CREO GLI ELEMENTI HTML
-//   const card = document.createElement("div");
-//   // const firstName = document.createElement("h4");
-//   // const lastName = document.createElement("h4");
-//   // const role = document.createElement("h6");
-//   // const image = document.createElement("img");
-
-//   // //ASSEGNO LE CLASSI
-//   card.classList.add("box");
-//   // firstName.classList.add("first-name");
-//   // lastName.classList.add("last-name");
-//   // role.classList.add("role");
-//   // image.classList.add("image");
-
-//   // //INIETTO IL CONTENUTO NELL'HTML
-//   // firstName.textContent = arrayTeam[i].firstName;
-//   // lastName.textContent = arrayTeam[i].lastName;
-//   // role.textContent = arrayTeam[i].role;
-//   // image.src = arrayTeam[i].img;
-
-//   // //APPENDO LA CARD E I SUOI ELEMENTI INTERNI
-//   cardContainer.appendChild(card);
-//   // card.appendChild(image);
-//   // card.appendChild(firstName);
-//   // card.appendChild(lastName);
-//   // card.appendChild(role); 
+// // //CICLO L'ARRAY DI OGGETTI
+// // for (let i = 0; i < arrayTeam.length; i++) {
+// //   //CREO L'ELEMENTO PADRE
+// //   const card = document.createElement("div");
+// //   card.classList.add("box");
+// //   cardContainer.appendChild(card);
+// //   //INVOCO LE FUNZIONI CHE CREANO GLI ELEMENTI CHILDS
+// //   createHtmlElements(arrayTeam[i].img, card);
+// //   createHtmlElements(arrayTeam[i].lastName, card);
+// //   createHtmlElements(arrayTeam[i].firstName, card);
+// //   createHtmlElements(arrayTeam[i].role, card);
+// // }
 
 
-//   createHtmlElements(arrayTeam[i].img, card);
-//   createHtmlElements(arrayTeam[i].lastName, card);
-//   createHtmlElements(arrayTeam[i].firstName, card);
-//   createHtmlElements(arrayTeam[i].role, card);
-// }
-
-
-// //COSTRUTTORE GENERICO DI HTML ELEMENTS
-// /**La funzione crea Elementi Html e li inietta nel DOM
-//  * In input riceve un singolo elemento di un array (che
-//  * viene ciclata quando si invoca la function) e la card contenitore.
-//  * La function dovra' essere invocata nel for globale tante volte quanti sono
-//  * gli elementi dei suoi oggetti da gestire.
-//  * 
-//  * @param {*} singleArrayElement 
-//  * @param {*} card 
-//  */
-// function createHtmlElements(singleArrayElement, box) {
-//   let myNewElement = document.createElement("h4");
-//   myNewElement.classList.add("first-name");
-//   myNewElement.innerHTML = singleArrayElement;
-//   box.appendChild(myNewElement);
-//   console.log(myNewElement);
-// }
-// /* DA COMPLETARE: 
-// 1) nella img il path viene visualizzato come stringa anziche essere inserito
-// nel "src" del tag img
-// 2) l'istruzione che crea il tipo di tag (h4,h6,img) deve essere generica e 
-// il tag type deve essere fornito come argomento della function
-// 3) per la classe stesse considerazioni del punto 2
-// */
+// // //COSTRUTTORE GENERICO DI HTML ELEMENTS
+// // /**La funzione crea Elementi Html e li inietta nel DOM
+// //  * In input riceve un singolo elemento di un array (che
+// //  * viene ciclata quando si invoca la function) e la card contenitore.
+// //  * La function dovra' essere invocata nel for globale tante volte quanti sono
+// //  * gli elementi dei suoi oggetti da gestire.
+// //  * 
+// //  * @param {*} singleArrayElement 
+// //  * @param {*} card 
+// //  */
+// // function createHtmlElements(singleArrayElement, box) {
+// //   let myNewElement = document.createElement("h4");
+// //   myNewElement.classList.add("first-name");
+// //   myNewElement.innerHTML = singleArrayElement;
+// //   box.appendChild(myNewElement);
+// //   console.log(myNewElement);
+// // }
+// // /* DA COMPLETARE: 
+// // 1) nella img il path viene visualizzato come stringa anziche essere inserito
+// // nel "src" del tag img
+// // 2) l'istruzione che crea il tipo di tag (h4,h6,img) deve essere generica e 
+// // il tag type deve essere fornito come argomento della function
+// // 3) per la classe stesse considerazioni del punto 2
+// // 4) valutare se possibile spostare la creazione della card da globale alla 
+// //     function (gestire l'assenza di inner.HTML)
+// // */
